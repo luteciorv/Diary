@@ -22,8 +22,8 @@ namespace Diary
             // Verificar se ocorreu alguma exceção
             if (e.Exception != null)
             {
-                // Exibir mensagem de erro
-                lMessage.Text = "Erro! Email já cadastrado ou campo em branco.";
+                // Exibir mensagem de erro                
+                Response.Write("<script> alert('Erro! Email já cadastrado ou campo em branco'); </script>");
 
                 // Exceção tratada
                 e.ExceptionHandled = true;
@@ -44,8 +44,8 @@ namespace Diary
             // Verificar se ocorreu alguma exceção
             if (e.Exception != null)
             {
-                // Exibir mensagem de erro
-                lMessage.Text = "Campo em branco.";
+                // Exibir mensagem de erro                
+                Response.Write("<script> alert('Campo em branco.'); </script>");
 
                 // Exceção tratada
                 e.ExceptionHandled = true;

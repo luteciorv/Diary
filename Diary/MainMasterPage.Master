@@ -25,9 +25,9 @@
                 <DynamicSelectedStyle BackColor="#507CD1" />
                 <Items>
                     <asp:MenuItem NavigateUrl="~/Index.aspx" Text="Home" Value="Home"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="~/Users.aspx" Text="Usuário" Value="Usuário"></asp:MenuItem>
-                    <asp:MenuItem Text="Contato" Value="Contato" NavigateUrl="~/Contacts.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Sair" Value="Sair"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Users.aspx" Text="Usuários" Value="Usuários"></asp:MenuItem>
+                    <asp:MenuItem Text="Contatos" Value="Contatos" NavigateUrl="~/Contacts.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Sair" Value="Sair" NavigateUrl="~/Login.aspx"></asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
@@ -48,12 +48,12 @@
         
         <!-- Rodapé -->
         <footer>
-            <p2> 
+            <p> 
             <br />
             <br />
             Site desenvolvido por
                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://www.linkedin.com/in/luis-felipe-r-valoura-38501616a/" Target="_blank">Luís</asp:HyperLink>
-            </p2>
+            </p>
         </footer>
 
     </form>    
