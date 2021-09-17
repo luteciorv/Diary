@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMasterPage.master.cs" Inherits="Diary.MainMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Minha agenda web</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Agenda Web</h1>
+        </header>
+
+        <!-- Menu -->
+        <nav>
+            <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Segoe UI" Font-Size="14px" ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#B5C7DE" />
+                <DynamicSelectedStyle BackColor="#507CD1" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Views/Index.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Views/Users.aspx" Text="Usuários" Value="Usuários"></asp:MenuItem>
+                    <asp:MenuItem Text="Contatos" Value="Contatos" NavigateUrl="~/Views/Contacts.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Sair" Value="Sair" NavigateUrl="~/Views/Login.aspx"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#507CD1" />
+            </asp:Menu>
+        </nav>
+
+        <!-- Conteúdo principal -->
+        <main>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p>
+                        
+                    </p>
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+        
+        <!-- Rodapé -->
+        <footer>
+            <p> 
+            <br />
+            <br />
+            Site desenvolvido por
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://www.linkedin.com/in/luis-felipe-r-valoura-38501616a/" Target="_blank">Luís</asp:HyperLink>
+            </p>
+        </footer>
+
+    </form>    
+</body>
+</html>

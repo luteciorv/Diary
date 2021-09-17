@@ -62,7 +62,7 @@ namespace Diary
             catch(Exception excep)
             {
                 Response.Write("<script> alert('" + excep.Message + "'); </script>");
-            }            
+            }   
         }
     }
 }
