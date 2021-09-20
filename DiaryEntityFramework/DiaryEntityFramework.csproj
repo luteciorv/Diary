@@ -98,6 +98,7 @@
     <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
+    <Content Include="Images\Diary - Image.png" />
     <Content Include="Views\Contacts.aspx" />
     <Content Include="Views\Index.aspx" />
     <Content Include="Views\Login.aspx" />
@@ -282,6 +283,7 @@
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ContactService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Views\Contacts.aspx.cs">
       <DependentUpon>Contacts.aspx</DependentUpon>

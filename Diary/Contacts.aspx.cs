@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Diary
 {
-    public partial class Contacts : System.Web.UI.Page
+    public partial class Contacts : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,7 +24,7 @@ namespace Diary
                     // Pegar a string de conexão
                     System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
                     System.Configuration.ConnectionStringSettings connectionString;
-                    connectionString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
+                    connectionString = rootWebConfig.ConnectionStrings.ConnectionStrings["Diary EF DatabaseConnectionString"];
 
                     // Criar um objeto de conexão
                     SqlConnection connection = new SqlConnection();
@@ -39,7 +35,7 @@ namespace Diary
                     };
 
                     // Consulta
-                    cmd.CommandText = "INSERT INTO Contact (Name, Email, Phone) VALUES (@Name, @Email, @Phone)";
+                    cmd.CommandText = "INSERT INTO Contacts (Name, Email, Phone) VALUES (@Name, @Email, @Phone)";
                     cmd.Parameters.AddWithValue("Name", txbName.Text);
                     cmd.Parameters.AddWithValue("Email", txbEmail.Text);
                     cmd.Parameters.AddWithValue("Phone", txbPhone.Text);
@@ -51,6 +47,11 @@ namespace Diary
 
                     // Atualizar o Grid View com os dados do novo contato
                     gvContacts.DataBind();
+
+                    // Limpar os campos
+                    txbName.Text = "";
+                    txbEmail.Text = "";
+                    txbPhone.Text = "";
                 }
 
                 else

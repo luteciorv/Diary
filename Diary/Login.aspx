@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Diary.Login" %>
+﻿<%@ Page Language="C#" Async="true" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Diary.Login" %>
 
 <!DOCTYPE html>
 
@@ -14,8 +14,7 @@
             <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
             <br />
             <asp:TextBox ID="txbEmail" runat="server"></asp:TextBox>
-            <br />
-            <asp:Button ID="btnLogin" runat="server" Font-Bold="True" Font-Names="Calibri" Font-Overline="False" OnClick="BtnLogin_Click" style="margin-left: 170px; margin-top: 5px" Text="Entrar" />
+            <asp:Button ID="btnLogin" runat="server" Font-Bold="True" Font-Names="Segoe UI" Font-Overline="False" OnClick="BtnLogin_Click" style="margin-left: 30px; margin-top: 5px" Text="Entrar" BackColor="#00CC00" BorderColor="Black" BorderStyle="Solid" Font-Size="12px" ForeColor="White" Width="60px" />
             <br />
             <asp:Label ID="Label2" runat="server" Text="Senha"></asp:Label>
             <br />

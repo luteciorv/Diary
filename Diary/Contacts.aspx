@@ -12,7 +12,7 @@
 <asp:Label ID="Label4" runat="server" Font-Names="Calibri" Font-Size="16px" Text="Email"></asp:Label>
 <br />
 <asp:TextBox ID="txbEmail" runat="server" Width="250px"></asp:TextBox>
-<asp:Button ID="btnInsert" runat="server" Font-Names="Calibri" Font-Size="16px" OnClick="BtnInsert_Click" style="margin-left: 28px" Text="Inserir" />
+<asp:Button ID="btnInsert" runat="server" Font-Names="Segoe UI" Font-Size="16px" OnClick="BtnInsert_Click" style="margin-left: 28px" Text="Inserir" BackColor="#33CC33" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" ForeColor="White" />
 <br />
 <br />
 <asp:Label ID="Label5" runat="server" Font-Names="Calibri" Font-Size="16px" Text="Telefone"></asp:Label>
@@ -22,12 +22,12 @@
 <br />
 <br />
 <br />
-<asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Dubai" Font-Size="22px" Text="Lista de Contatos"></asp:Label>
+<asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Segoe UI" Font-Size="22px" Text="Lista de Contatos"></asp:Label>
     <asp:GridView ID="gvContacts" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSourceContacts" ForeColor="#333333" GridLines="None" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
-            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+            <asp:BoundField DataField="Id" HeaderText="Identificação" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
             <asp:BoundField DataField="Name" HeaderText="Nome" SortExpression="Name" />
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             <asp:BoundField DataField="Phone" HeaderText="Telefone" SortExpression="Phone" />
@@ -43,7 +43,7 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSourceContacts" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Contact] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Contact] ([Name], [Email], [Phone]) VALUES (@Name, @Email, @Phone)" SelectCommand="SELECT * FROM [Contact]" UpdateCommand="UPDATE [Contact] SET [Name] = @Name, [Email] = @Email, [Phone] = @Phone WHERE [Id] = @Id">
+    <asp:SqlDataSource ID="SqlDataSourceContacts" runat="server" ConnectionString="<%$ ConnectionStrings:Diary EF DatabaseConnectionString %>" DeleteCommand="DELETE FROM [Contacts] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Contacts] ([Name], [Email], [Phone]) VALUES (@Name, @Email, @Phone)" SelectCommand="SELECT [Id], [Name], [Email], [Phone] FROM [Contacts]" UpdateCommand="UPDATE [Contacts] SET [Name] = @Name, [Email] = @Email, [Phone] = @Phone WHERE [Id] = @Id">
         <DeleteParameters>
             <asp:Parameter Name="Id" Type="Int32" />
         </DeleteParameters>

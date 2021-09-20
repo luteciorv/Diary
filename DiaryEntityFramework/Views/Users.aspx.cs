@@ -6,14 +6,14 @@ using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace DiaryEntityFramework.Views
 {
-    public partial class Users : System.Web.UI.Page
+    public partial class Users : Page
     {
+        // Context do banco de dados
         private readonly DiaryEFContext _context = new DiaryEFContext();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -32,8 +32,13 @@ namespace DiaryEntityFramework.Views
         //     string sortByExpression
         public async Task<List<User>> GetUsersAsync()
         {
+            // Instanciar service
             UserService userService = new UserService(_context);
+
+            // Consultar
             var query = await userService.FindAllUsersAsync();
+
+            // Retornar contatos
             return query;
         }
 
@@ -81,7 +86,7 @@ namespace DiaryEntityFramework.Views
                 // Caso não tenha encontrado
                 if (user == null)
                 {
-                    ModelState.AddModelError("", String.Format("O item com id {0} não foi encontrado", id));
+                    ModelState.AddModelError("", string.Format("O item com id {0} não foi encontrado", id));
                     return;
                 }
 
@@ -147,7 +152,6 @@ namespace DiaryEntityFramework.Views
             txbPassword.Text = "";
             txbName.Text = "";
             txbAge.Text = "";
-           ddlContact.SelectedValue = "";
         }
 
         private void PopulateDDLContacts()

@@ -3,9 +3,8 @@ using DiaryEntityFramework.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
+using System.Data.Entity.Validation;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace DiaryEntityFramework.Services
 {
@@ -23,7 +22,16 @@ namespace DiaryEntityFramework.Services
         // Encontrar e retornar todos os usuários
         public async Task<List<User>> FindAllUsersAsync()
         {
-            return await _context.User.ToListAsync();
+            try
+            {
+                return await _context.User.ToListAsync();
+            }
+
+            catch(DbEntityValidationException e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
         }
 
         // Adicionar usuário

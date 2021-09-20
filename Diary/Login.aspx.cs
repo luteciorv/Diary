@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
 namespace Diary
 {
     public partial class Login : System.Web.UI.Page
@@ -27,7 +22,7 @@ namespace Diary
             // Pegar a string de conexão
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
             System.Configuration.ConnectionStringSettings connectionString;
-            connectionString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
+            connectionString = rootWebConfig.ConnectionStrings.ConnectionStrings["Diary EF DatabaseConnectionString"];
 
             // Criar um objeto de conexão
             SqlConnection connection = new SqlConnection();
@@ -38,7 +33,7 @@ namespace Diary
             };
 
             // Consulta
-            cmd.CommandText = "SELECT * FROM [User] WHERE Email = @Email AND Password = @Password";            
+            cmd.CommandText = "SELECT * FROM [Users] WHERE Email = @Email AND Password = @Password";            
             cmd.Parameters.AddWithValue("Email", email);
             cmd.Parameters.AddWithValue("Password", password);
 

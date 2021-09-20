@@ -49,7 +49,7 @@ namespace DiaryEntityFramework.Models
         // Remover um contato
         public void RemoveContact(Contact contact)
         {
-            Contacts.Remove(contact);
+            Contacts.Remove(contact);            
         }
 
         // Encontrar um contato pelo Id
