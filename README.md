@@ -1,9 +1,9 @@
-# Diary---Webforms
-Curso de Webforms - Agenda Online
+# Diary - Webforms
+Curso de Webforms da Udemy - Agenda Online
 
 Dentro da solução você encontrará dois projetos
-* Diary
-* DiaryEntityFramework
+> * Diary
+> * DiaryEntityFramework
 
 Ambos possuem:
 > * Tela de login com validação
@@ -11,6 +11,7 @@ Ambos possuem:
 > * Logout
 > * CRUD de usuários
 > * CRUD de contatos
+> * Conexão local com o Banco de dados SQLServer
 
 ### Diferenças
 O que difere um do outro é que no projeto Diary eu usei consultas diretas ao banco de dados. Expressões diretas, comandos em string, SqlConnection e etc.
@@ -18,11 +19,11 @@ Já no projeto DiaryEntityFramework, como o próprio nome sugere, eu utilizei a 
 que eu realizei no projeto Diary eu fiz neste, mas usando o EntityFramework como ferramenta
 
 ### Vantagens de usar o EntityFramework
-* Maior flexibilidade no código
-* Melhor manutenção
-* Organização e atribuição de função (Cada classe respeita suas funções e trata única e excluivamente delas)
-* Performance (Utilizei métodos Async para o CRUD)
-* Legível
+> * Maior flexibilidade no código
+> * Melhor manutenção
+> * Organização e atribuição de função (Cada classe respeita suas funções e trata única e excluivamente delas)
+> * Performance (Utilizei métodos Async para o CRUD)
+> * Legível
 
 ### Teste por sí mesmo
 A melhor forma de comparar ambos é na tela de Contatos. Tentei deixar a interface de ambos idêntica, divergindo apenas na paginação do GridView, já que no projeto
