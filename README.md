@@ -31,3 +31,12 @@ DiaryEntityFramework eu não programei a paginação por conta de alguns fatores
 na mão utilizando certos recursos).
 Entrando nessa tela, você pode realizar o CRUD de contatos tranquilamente. Aconselho a executar ambos os códigos e testar eles "juntos". Suponho que a diferença de
 desempenho é imperceptível, mas o código é totalmente bem notado.
+
+### Telas
+![](Images/Login.PNG?raw=true)
+
+![](Images/Index.PNG?raw=true)
+
+![](Images/Users.PNG?raw=true)
+
+![](Images/Contacts.PNG?raw=true)
